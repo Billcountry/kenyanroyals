@@ -44,7 +44,7 @@ def handle_parameters(params, headers):
 def before_request():
     if request.url.startswith('http://') and not request.url.startswith('http://localhost'):
         url = request.url.replace('http://', 'https://', 1)
-        code = status_code.redirect
+        code = 301
         return redirect(url, code=code)
 
 
