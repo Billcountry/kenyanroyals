@@ -42,9 +42,12 @@ def handle_parameters(params, headers):
 
 @app.before_request
 def before_request():
+    print(request.url)
     if request.url.startswith('http://') and (not request.url.startswith('http://localhost')):
         url = request.url.replace('http://', 'https://', 1)
+        print(url)
         return redirect(location=url, code=status_code.redirect)
+    print(request.url)
 
 
 @app.route('/')
