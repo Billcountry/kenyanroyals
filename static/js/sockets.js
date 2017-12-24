@@ -2,7 +2,7 @@
  * Created by ruth on 12/23/17.
  */
 
-var socket = io.connect('http://' + document.domain + ':' + location.port);
+var socket = io.connect('https://' + document.domain + ':' + location.port);
 
     socket.on('connect', function() {
         // Start sending data to the server

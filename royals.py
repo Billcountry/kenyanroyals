@@ -40,7 +40,7 @@ def handle_parameters(params, headers):
     return success, arguments
 
 
-@app.before_request
+# @app.before_request
 def before_request():
     print(request.url)
     if request.url.startswith('http://') and (not request.url.startswith('http://localhost')):
