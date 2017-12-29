@@ -59,3 +59,6 @@ body::-webkit-scrollbar-button{
 .container{
     height: 100%;
 }
+.d-none{
+    display:none;
+}
