@@ -1,5 +1,5 @@
 from flask import Flask, redirect, request, Response, url_for
-from flask_socketio import SocketIO, emit
+from flask_socketio import SocketIO, send
 import json
 import os
 from logic.utilities import status_code
@@ -42,12 +42,9 @@ def handle_parameters(params, headers):
 
 @app.before_request
 def before_request():
-    print(request.url)
     if request.url.startswith('http://') and (not request.url.startswith('http://localhost')):
         url = request.url.replace('http://', 'https://', 1)
-        print(url)
         return redirect(location=url, code=status_code.redirect)
-    print(request.url)
 
 
 @app.route('/')
@@ -55,6 +52,11 @@ def before_request():
 @app.route('/default.aspx')
 def index():
     return app.send_static_file('index.html')
+
+
+@app.route('/logo')
+def index():
+    return app.send_static_file('img/royals.png')
 
 
 # serve files from root url instead of static directory
@@ -109,16 +111,18 @@ def api_actions(action):
     return Response(dict_to_json(out), content_type="text/json")
 
 
-@socketio.on('connect', namespace='/deposit')
-def connect(message):
+@socketio.on('connect')
+def connected(message, mess2):
+    print("Client connected")
     print(message)
-    emit('connect', {'success': False})
+    send('connect', {'success': False})
 
 
-@socketio.on('disconnect', namespace='/deposit')
-def disconnect(message):
+@socketio.on('disconnect')
+def disconnected(message, mess2):
+    print("Client Disconnected")
     print(message)
-    emit('disconnect', {'success': False})
+    send('disconnect', {'success': False})
 
 
 # Handle JSON data from an unnamed event
