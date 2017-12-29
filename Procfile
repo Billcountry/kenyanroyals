@@ -1,1 +1,1 @@
-web: python3.6 royals.py
+web: gunicorn royals:app
