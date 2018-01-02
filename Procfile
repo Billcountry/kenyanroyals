@@ -1,1 +1,1 @@
-web: gunicorn royals:app
+web: gunicorn --worker-class eventlet -w 1 royals:app
