@@ -1,1 +1,1 @@
-web: gunicorn --worker-class eventlet -w 1 royals:app
+web: gunicorn --worker-class eventlet -w 1 royals:app  --log-file=logs/gunicorn.log
