@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kenyan Royals</title>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <!--Import Font Awesome Locally or from cdn-->
+    <script type="text/javascript">
+        if(!navigator.onLine){
+            document.write("<link type='text/css' rel='stylesheet' href='css/font-awesome.min.css' media='screen,projection'/>");
+        }else{
+            document.write("<script src='https://use.fontawesome.com/cad94addce.js'><\/script>");
+        }
+    </script>
+    <noscript>
+        <link type='text/css' rel='stylesheet' href='css/font-awesome.min.css' media='screen,projection'/>
+    </noscript>
+    <!--Import Custom CSS-->
+    <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="side-bar" class="button-collapse"><i
+                    class="fa fa-navicon"></i></a>
+            <span style="clear: both;"></span>
+            <a href="#" class="brand-logo hide-on-large-only">
+                <span class="logo-txt" style="float: left;">Kenyan&nbsp;</span>
+                <img style="float: left;" class="logo-img" src="img/res/mipmap-hdpi/logo.png">
+                <span class="logo-txt" style="float: left;">&nbsp;Royals</span>
+                <span style="clear: left;"></span>
+            </a>
+            <a href="#" class="brand-logo hide-on-med-and-down">
+                <img style="float: left; margin-left: 5px;" class="logo-img" src="img/royals.png">
+                <span style="float: left;">&nbsp;Kenyan&nbsp;</span>
+                <span style="float: left;">Royals</span>
+                <span style="clear: left;"></span>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home" onclick="page(this.hash)"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#stages" onclick="page(this.hash)"><i class="fa fa-tasks"></i> Stages</a></li>
+                <li><a href="#projects" onclick="page(this.hash)"><i class="fa fa-hourglass-1"></i> Projects</a></li>
+                <li><a href="#users" onclick="page(this.hash)"><i class="fa fa-user-circle"></i> Users</a></li>
+                <li><a href="#foundation" onclick="page(this.hash)"><i class="fa fa-anchor"></i> Foundation</a></li>
+                <li><a href="#about" onclick="page(this.hash)"><i class="fa fa-info-circle"></i> About</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div id="preloader" class="progress black">
+    <div class="indeterminate green"></div>
+</div>
+
+<ul id="side-bar" class="side-nav">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="img/kenya-landscape.jpg">
+            </div>
+            <a href="#"><img class="circle" src="img/royals.png"></a>
+            <a href="#"><span class="white-text name">Kenyan Royals</span></a>
+            <a href="#"><span class="white-text email">support@kenyanroyals.com</span></a>
+        </div>
+    </li>
+    <li><a href="#home" onclick="page(this.hash)"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="#stages" onclick="page(this.hash)"><i class="fa fa-tasks"></i> Stages</a></li>
+    <li><a href="#foundation" onclick="page(this.hash)"><i class="fa fa-hourglass-1"></i> Projects</a></li>
+    <li><a href="#projects" onclick="page(this.hash)"><i class="fa fa-user-circle"></i> Users</a></li>
+    <li><a href="#foundation" onclick="page(this.hash)"><i class="fa fa-anchor"></i> Foundation</a></li>
+    <li><a href="#about" onclick="page(this.hash)"><i class="fa fa-info-circle"></i> About</a></li>
+</ul>
+
+<div id="home" class="">
+    <div class="row">
+        <div id="disp_success" class="waves-effect waves-light center col s4 light-green darken-4 row white-text" style="margin-bottom: 0 !important;">
+            <span class="col s12 bold">Success</span>
+            <h5 class="col m3 l6 flow-text hide-on-small-and-down">99%</h5>
+            <h5 class="flow-text col s12 m9 l6"><strong>80</strong> People</h5>
+        </div>
+        <div id="disp_failed" class="waves-effect waves-light center col s4 deep-orange accent-4 row white-text" style="margin-bottom: 0 !important;">
+            <span class="col s12 bold">Failed</span>
+            <h5 class="col m3 l6 flow-text hide-on-small-and-down">1%</h5>
+            <h5 class="flow-text col s12 m9 l6"><strong>1</strong> Person</h5>
+        </div>
+        <div id="disp_pending" class="waves-effect waves-green center col s4 amber row white-text" style="margin-bottom: 0 !important;">
+            <span class="col s12 bold">Waiting</span>
+            <h5 class="flow-text col s12"><strong>83</strong> People</h5>
+        </div>
+    </div>
+
+    <div class="container center white" style="padding-bottom: 5px !important;">
+        <div class="row">
+            <h5 class="col s12 green-text">Current Campaign</h5>
+            <span class="col s2 red-text small right-align"><span class="hide-on-small-and-down">Ksh </span>8800</span>
+            <div class="progress red col s8">
+                <div class="determinate green" style="width: 12%;"></div>
+            </div>
+            <span class="col s2 green-text small left-align"><span class="hide-on-small-and-down">Ksh </span>1200</span>
+
+            <div class="col m5 s12 l4">
+                <img class="profile-sm-md" src="img/profile.jpg">
+                <p class="flow-text">
+                    John Doe Uknown
+                    <br>
+                    <small>Looking for help to start a kiosk</small>
+                    <br>
+                    <strong>Target: </strong>
+                    <span>Ksh 10,000</span>
+                </p>
+                <button class="waves-effect waves-light btn light-green darken-4 white-text"><i
+                        class="fa fa-plus-circle"></i> Contribute
+                </button>
+            </div>
+            <div class="col l8 m7 s12 row left-align">
+                <h5 class="light-green-text text-darken-4 col s12">Personal Information</h5>
+                <strong class="col s6 m5 l4">Date of Birth: </strong><span class="col s6 m7 l8">16 - May - 1991</span>
+                <strong class="col s6 m5 l4">Marital Status: </strong><span class="col s6 m7 l8">Single</span>
+                <strong class="col s6 m5 l4">Education: </strong><span class="col s6 m7 l8">Form Four Certificate</span>
+                <h5 class="light-green-text text-darken-4 col s12">Story</h5>
+                <p class="col s12">
+                    I came to nairobi with a dream; a dream to come and accumulate my wealth in the city
+                    and move back home and build a better life for me and my family. It's a land of opportunities
+                    but with a lot of cliffs to climb. I started a shoes business and lost all my capital by being
+                    arrested by kanjo
+                    every now and then till I ended up living in the streets after being unable to pay my rent.
+                    Now am here hoping to get a chance to start over, and hoping that with the help of legal and
+                    business experts I'll make it this time.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m10 offset-m1 l6">
+            <div class="card">
+                <div class="card-content row">
+                    <div class="col m5 l4 s6 offset-s3 center">
+                        <a class="green-text" href="#!profile?kennedy">
+                            <img class="profile-sm-md" src="img/profile.jpg">
+                        </a>
+                    </div>
+                    <h5 class="col m7 l8 s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy Muziki</a>
+                    </h5>
+                    <p class="col flow-text m7 l8 s12 row">
+                        <strong class="col s6 m5 l4">Amount</strong><span class="col s6 m7 l8">Ksh 12,000</span>
+                        <strong class="col s6 m5 l4">Time</strong><span class="col s6 m7 l8">3 days ago</span>
+                        <small class="col s12">
+                            Rented a house with a friend and started a shoe shiner station.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m10 offset-m1 l6">
+            <div class="card">
+                <div class="card-content row">
+                    <div class="col m5 l4 s6 offset-s3 center">
+                        <a class="green-text" href="#!profile?kennedy">
+                            <img class="profile-sm-md" src="img/profile.jpg">
+                        </a>
+                    </div>
+                    <h5 class="col m7 l8 s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy Muziki</a>
+                    </h5>
+                    <p class="col flow-text m7 l8 s12 row">
+                        <strong class="col s6 m5 l4">Amount</strong><span class="col s6 m7 l8">Ksh 12,000</span>
+                        <strong class="col s6 m5 l4">Time</strong><span class="col s6 m7 l8">3 days ago</span>
+                        <small class="col s12">
+                            Rented a house with a friend and started a shoe shiner station.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m10 offset-m1 l6">
+            <div class="card">
+                <div class="card-content row">
+                    <div class="col m5 l4 s6 offset-s3 center">
+                        <a class="green-text" href="#!profile?kennedy">
+                            <img class="profile-sm-md" src="img/profile.jpg">
+                        </a>
+                    </div>
+                    <h5 class="col m7 l8 s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy Muziki</a>
+                    </h5>
+                    <p class="col flow-text m7 l8 s12 row">
+                        <strong class="col s6 m5 l4">Amount</strong><span class="col s6 m7 l8">Ksh 12,000</span>
+                        <strong class="col s6 m5 l4">Time</strong><span class="col s6 m7 l8">3 days ago</span>
+                        <small class="col s12">
+                            Rented a house with a friend and started a shoe shiner station.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m10 offset-m1 l6">
+            <div class="card">
+                <div class="card-content row">
+                    <div class="col m5 l4 s6 offset-s3 center">
+                        <a class="green-text" href="#!profile?kennedy">
+                            <img class="profile-sm-md" src="img/profile.jpg">
+                        </a>
+                    </div>
+                    <h5 class="col m7 l8 s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy Muziki</a>
+                    </h5>
+                    <p class="col flow-text m7 l8 s12 row">
+                        <strong class="col s6 m5 l4">Amount</strong><span class="col s6 m7 l8">Ksh 12,000</span>
+                        <strong class="col s6 m5 l4">Time</strong><span class="col s6 m7 l8">3 days ago</span>
+                        <small class="col s12">
+                            Rented a house with a friend and started a shoe shiner station.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m10 offset-m1 l6">
+            <div class="card">
+                <div class="card-content row">
+                    <div class="col m5 l4 s6 offset-s3 center">
+                        <a class="green-text" href="#!profile?kennedy">
+                            <img class="profile-sm-md" src="img/profile.jpg">
+                        </a>
+                    </div>
+                    <h5 class="col m7 l8 s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy Muziki</a>
+                    </h5>
+                    <p class="col flow-text m7 l8 s12 row">
+                        <strong class="col s6 m5 l4">Amount</strong><span class="col s6 m7 l8">Ksh 12,000</span>
+                        <strong class="col s6 m5 l4">Time</strong><span class="col s6 m7 l8">3 days ago</span>
+                        <small class="col s12">
+                            Rented a house with a friend and started a shoe shiner station.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="stages" class="d-none">
+    <div class="row">
+        <div class="col s12 m5 l4">
+            <div class="card green darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title center"> Susan's Profile</span>
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <img src="img/profile.jpg">
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="divider black"></div>
+                            <div class="section">
+                                <p><span class="col s5"> Name</span> <span class=" col s2">:</span><span class="col s5">Susan Kiratu</span>
+                                </p>
+                                <p><span class="col s5"> status </span> <span class=" col s2">:</span><span
+                                        class="col s5">Helped</span></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action red">
+                    <a href="#">View more Information</a>
+                </div>
+            </div>
+        </div>
+        <div class="col m7 l8">
+            <div class="card red darken-1">
+                <div class="card-content white-text">
+                    <div class="row green"><span class="card-title center"> Information Panel</span></div>
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <img src="img/profile.jpg">
+                        </div>
+                        <div class="col m6 s12">
+                            <h6 class="center"> Profile Information</h6>
+                            <div class="divider green"></div>
+                            <div class="section">
+                                <p><span class="col s5"> Name</span> <span class=" col s2">:</span><span class="col s5">Susan Kiratu</span>
+                                </p>
+                                <p><span class="col s5"> status </span> <span class=" col s2">:</span><span
+                                        class="col s5">Helped</span></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m6 s12 l12">
+                            <h6 class="center"> Business Information</h6>
+                            <div class="divider green"></div>
+                            <div class="section">
+                                <p>
+                                    After receiving Help from the Kenya Royals I managed to ................
+                                    ......................................................................
+                                    ......................................................................
+                                    ...................... The business is now thriving and I am located along
+                                    Kagundo Road. Thank you Kenya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="foundation" class="container d-none">
+    <div class="row">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header center">Contribute</div>
+                <div class="collapsible-body green darken-1">
+                    <span>Donate: Mpesa, Airtel, Card, Bank </span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header active center">Team</div>
+                <div class="collapsible-body red darken-1">
+                    <span>The Movement was founded by ------ . Below are the core foundation members</span>
+                    <div class="row">
+                        <div class="col s12 m6 l6">
+                            <div class="card green darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title center"> Director</span>
+                                    <div class="row"></div>
+                                    <div class="row">
+                                        <div class="col m6 s12">
+                                            <img src="img/profile.jpg">
+                                        </div>
+                                        <div class="col m6 s12">
+                                            <div class="divider red"></div>
+                                            <div class="section">
+                                                <p><span class="col s5"> Name</span> <span class=" col s2">:</span><span
+                                                        class="col s5">Esther Kiarie</span>
+                                                </p>
+                                                <p><span class="col s5"> Occupation </span> <span
+                                                        class=" col s2">:</span><span
+                                                        class="col s5">Lawyer</span></p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-action red">
+                                    <a href="#">View more Information</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6 l6">
+                                <div class="card green darken-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title center"> Project Manager</span>
+                                        <div class="row"></div>
+                                        <div class="row">
+                                            <div class="col m6 s12">
+                                                <img src="img/profile.jpg">
+                                            </div>
+                                            <div class="col m6 s12">
+                                                <div class="divider red"></div>
+                                                <div class="section">
+                                                    <p><span class="col s5"> Name</span> <span
+                                                            class=" col s2">:</span><span
+                                                            class="col s5">Judah Muthomi</span>
+                                                    </p>
+                                                    <p><span class="col s5"> occupation </span> <span
+                                                            class=" col s2">:</span><span
+                                                            class="col s5">Lecturer</span></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action red">
+                                        <a href="#">View more Information</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="projects">
+
+</div>
+
+<div id="about">
+
+</div>
+
+<div id="users">
+
+</div>
+
+
+<footer class="page-footer grey darken-3 white-text">
+    <div class="row">
+        <div class="col l4 m6 s12">
+            <h5 class="red-text">Mission</h5>
+            <p class="white-text">
+                Our mission as a community is to use the resources and skills that we have to build a better world for
+                everyone.
+                Our main focus is to ensure that everyone has a home and that they have the means to run and even grow
+                their home.
+                This range from orphans, individuals and families living on the street.
+            </p>
+        </div>
+        <div class="col l4 m6 s12">
+            <h5 class="red-text">Vision</h5>
+            <p class="white-text">
+                We envision a world where everyone has a place to call home, earns an honest living and everyone is self
+                dependent as we all strive to build a better nation for the future.
+                <br>
+                It will be forever impossible only if we don't try.
+            </p>
+        </div>
+        <div class="col l4 m8 s12 offset-m2">
+            <h5 class="red-text">Connect</h5>
+            <div class="collection center">
+                <a class="collection-item light-blue-text text-lighten-1" target="_blank"
+                   href="https://t.me/kenyan_royals"><i class="fa fa-telegram light-blue-text text-lighten-1"></i>
+                    Telegram</a>
+                <a class="collection-item blue-text text-darken-4" target="_blank" href="https://fb.me/kenyanroyals"><i
+                        class="fa fa-facebook blue-text text-darken-4"></i> Facebook</a>
+                <a class="collection-item light-blue-text text-lighten-1" target="_blank" href=""><i
+                        class="fa fa-twitter light-blue-text text-lighten-1"></i> Twitter</a>
+                <a class="collection-item red-text text-accent-3" target="_blank" href=""><i
+                        class="fa fa-youtube red-text text-accent-3"></i> Youtube</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-copyright grey darken-4 center">
+        <div class="container">
+            ©2017 Billcountry, All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    var page = function (identifier) {
+        document.querySelector("#home").classList.add('d-none');
+        document.querySelector("#stages").classList.add('d-none');
+        document.querySelector("#foundation").classList.add('d-none');
+        document.querySelector("#projects").classList.add('d-none');
+        document.querySelector("#about").classList.add('d-none');
+        document.querySelector("#users").classList.add('d-none');
+        if (document.querySelector(identifier).classList.contains('d-none')) {
+            document.querySelector(identifier).classList.remove('d-none');
+        }
+        $('html, body').animate({scrollTop: 0}, 800);
+    };
+    switch (window.location.hash) {
+        case "#home":
+        case "#stages":
+        case "#projects":
+        case "#foundation":
+        case "#about":
+        case "#users":
+            page(window.location.hash);
+    }
+</script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script type="text/javascript" src="js/actions.js"></script>
+<script>
+    document.querySelector("#preloader").classList.add('d-none');
+</script>
+<script type="text/javascript" src="js/socket.io.js"></script>
+<script type="text/javascript" src="js/sockets.js"></script>
+</body>
+</html>
