@@ -66,11 +66,6 @@ def index():
     return app.send_static_file('index.html')
 
 
-@app.route('/logo')
-def logo():
-    return send_from_directory(app.static_folder, 'img/royals.png')
-
-
 # serve files from root url instead of static directory
 @app.route('/<path:path>')
 def static_proxy(path):
