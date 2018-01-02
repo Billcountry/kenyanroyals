@@ -42,9 +42,8 @@ def log_error(title, data):
 def api_return(success, message, status):
     return {
         "success": success,
-        "message": message,
-        "status": status
-    }
+        "message": message
+    }, status
 
 
 def sha256(text: str):
@@ -167,4 +166,7 @@ def human_date(timestamp=datetime.now().timestamp(), date_only=False, time_ago=F
     return date.format('DD-MMM-YYYY HH:mm:ss', formatter='alternative')
 
 
+
+def py_jax(url, method, data, headers):
+    pass
 
