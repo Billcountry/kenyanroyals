@@ -146,115 +146,139 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col s12 m10 offset-m1 l6">
-                <div class="row white" style="margin: 2px;">
+        <div class="row" style="margin-top: 5px;">
+            <div class="col s12 m10 offset-m1 l6 row white panel">
                     <span class="col flow-text s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy
                         Muziki</a>
                     </span>
-                    <div class="col m5 l4 s6 offset-s3 center">
-                        <a class="green-text" href="#!profile?kennedy">
-                            <img class="profile-sm-md" src="img/profile.jpg">
-                        </a>
-                    </div>
-                    <span class="col flow-text m7 l8 s12 row">
+                <div class="col m5 l4 s6 offset-s3 center">
+                    <a class="green-text" href="#!profile?kennedy">
+                        <img class="profile-sm-md" src="img/profile.jpg">
+                    </a>
+                </div>
+                <span class="col flow-text m7 l8 s12 row">
                         <span class="col s6 m5 l4 semi-bold">Amount</span><span class="col s6 m7 l8">Ksh 12,000</span>
                         <span class="col s6 m5 l4 semi-bold">Time</span><span class="col s6 m7 l8">3 days ago</span>
                         <small class="col s12">
                             Rented a house with a friend and started a shoe shiner station.
                         </small>
                     </span>
-                </div>
             </div>
-            <div class="col s12 m10 offset-m1 l6">
-                <div class="row white" style="margin: 2px;">
+            <div class="col s12 m10 offset-m1 l6 row white panel">
                     <span class="col flow-text s12 center"><a class="green-text" href="#!profile?kennedy">Kennedy
                         Muziki</a>
                     </span>
-                    <div class="col m5 l4 s6 offset-s3 center">
-                        <a class="green-text" href="#!profile?kennedy">
-                            <img class="profile-sm-md" src="img/profile.jpg">
-                        </a>
-                    </div>
-                    <span class="col flow-text m7 l8 s12 row">
+                <div class="col m5 l4 s6 offset-s3 center">
+                    <a class="green-text" href="#!profile?kennedy">
+                        <img class="profile-sm-md" src="img/profile.jpg">
+                    </a>
+                </div>
+                <span class="col flow-text m7 l8 s12 row">
                         <span class="col s6 m5 l4 semi-bold">Amount</span><span class="col s6 m7 l8">Ksh 12,000</span>
                         <span class="col s6 m5 l4 semi-bold">Time</span><span class="col s6 m7 l8">3 days ago</span>
                         <small class="col s12">
                             Rented a house with a friend and started a shoe shiner station.
                         </small>
                     </span>
-                </div>
             </div>
         </div>
     </div>
 
     <div id="stages" class="d-none">
-        <div class="row">
-            <div class="col s12 m5 l4">
-                <div class="card green darken-1">
-                    <div class="card-content white-text">
-                        <span class="card-title center"> Susan's Profile</span>
-                        <div class="row"></div>
-                        <div class="row">
-                            <div class="col m6 s12">
-                                <img src="img/profile.jpg">
-                            </div>
-                            <div class="col m6 s12">
-                                <div class="divider black"></div>
-                                <div class="section">
-                                    <p><span class="col s5"> Name</span> <span class=" col s2">:</span><span
-                                            class="col s5">Susan Kiratu</span>
-                                    </p>
-                                    <p><span class="col s5"> status </span> <span class=" col s2">:</span><span
-                                            class="col s5">Helped</span></p>
+        <div class="card">
+            <div class="card-content">
+                <p class="flow-text">
+                    Welcome to stages. This is where we document our progress and archivements in changing lives.
+                    Ours is to help, but we follow to ensure that what we are doing has a meaning and is actually
+                    changing lives.
+                    For success we rejoice, for those waiting we work harder as we encourage them, for those who failed
+                    we tried.
+                </p>
+            </div>
+            <div class="card-tabs">
+                <nav>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="fa fa-search"></i></label>
+          <i class="fa fa-close"></i>
+        </div>
+      </form>
+    </div>
+  </nav>
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="orange-text waves-effect waves-orange" href="#tab_waiting">Waiting</a>
+                    </li>
+                    <li class="tab"><a class="light-green-text waves-effect waves-green text-darken-4 active"
+                                       href="#tab_success">Success</a></li>
+                    <li class="tab"><a class="red-text waves-effect waves-red" href="#tab_failed">Failed</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="tab_waiting">
+                    <p class="flow-text">Now this is me being lazy and disappointing coz it's really hard to run out of
+                        homeless people. Otherwise if we have, I think we've finally made it to the promised land. </p>
 
-                                </div>
-                            </div>
+                </div>
+                <div id="tab_success">
+                    <div class="row flex white">
+                        <div id="s_l_head" class="col s12 m5 l4 hide-on-small-and-down row"
+                             style="margin-bottom: 0; border-bottom: 1px solid #4caf50;">
+                            <span class="flow-text">Profiles</span>
                         </div>
-                    </div>
-                    <div class="card-action red">
-                        <a href="#">View more Information</a>
+                        <div id="s_p_head" class="col s12 m7 l8 row flex center"
+                             style="margin-bottom: 0; padding-left: 0; border-bottom: 1px solid #4caf50;">
+                            <span onclick="close_success_profile()"
+                                  class="col s2 hide-on-med-and-up green waves-effect waves-light flow-text"
+                                  style="margin-left: 0; padding-top: 2px;"><i
+                                    class="fa fa-chevron-left white-text"></i></span>
+                            <span id="success_profile_name" class="col s10 m12 flow-text semi-bold green-text">Open Profile</span>
+                        </div>
+                        <div id="s_l_body" class="col s12 m5 l4 hide-on-small-and-down row">
+                            <ul class="collection" id="success_list">
+                                <li class="collection-item avatar">
+                                    <a href="#" onclick="open_success_profile(null)"
+                                       class="light-green-text text-darken-4"><img src="img/royals_800.png"
+                                                                                   alt="" class="circle">
+                                        <h5 class="title">Christine Ng'endo</h5></a>
+                                    <p>Raised: 4000 <br>
+                                        <span class="small">Second Line</span>
+                                    </p>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <a href="#" onclick="open_success_profile(null)"
+                                       class="light-green-text text-darken-4"><img src="img/royals_800.png"
+                                                                                   alt="" class="circle">
+                                        <h5 class="title">Christine Ng'endo</h5></a>
+                                    <p>Raised: 4000 <br>
+                                        <span class="small">Second Line</span>
+                                    </p>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <a href="#" onclick="open_success_profile(null)"
+                                       class="light-green-text text-darken-4"><img src="img/royals_800.png"
+                                                                                   alt="" class="circle">
+                                        <h5 class="title">Christine Ng'endo</h5></a>
+                                    <p>Raised: 4000 <br>
+                                        <span class="small">Second Line</span>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="pagination center">
+                                <li class="disabled"><a href="#!"><i class="fa fa-chevron-left"></i></a></li>
+                                <li class="active"><a href="#!">1 of 20</a></li>
+                                <li class="waves-effect"><a href="#!"><i class="fa fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="s_p_body" class="col s12 m7 l8">
+                            <p class="flow-text">Here's a sample profile</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col m7 l8">
-                <div class="card red darken-1">
-                    <div class="card-content white-text">
-                        <div class="row green"><span class="card-title center"> Information Panel</span></div>
-                        <div class="row"></div>
-                        <div class="row">
-                            <div class="col m6 s12">
-                                <img src="img/profile.jpg">
-                            </div>
-                            <div class="col m6 s12">
-                                <h6 class="center"> Profile Information</h6>
-                                <div class="divider green"></div>
-                                <div class="section">
-                                    <p><span class="col s5"> Name</span> <span class=" col s2">:</span><span
-                                            class="col s5">Susan Kiratu</span>
-                                    </p>
-                                    <p><span class="col s5"> status </span> <span class=" col s2">:</span><span
-                                            class="col s5">Helped</span></p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col m6 s12 l12">
-                                <h6 class="center"> Business Information</h6>
-                                <div class="divider green"></div>
-                                <div class="section">
-                                    <p>
-                                        After receiving Help from the Kenya Royals I managed to ................
-                                        ......................................................................
-                                        ......................................................................
-                                        ...................... The business is now thriving and I am located along
-                                        Kagundo Road. Thank you Kenya
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="tab_failed">
+                    <p class="flow-text">This section is here, but our hope is that it will never come to this.</p>
                 </div>
             </div>
         </div>
@@ -337,14 +361,15 @@
                     <div class="collapsible-header"><h5 class="light-green-text text-darken-4">Contact Us</h5>
                     </div>
                     <div class="collapsible-body">
-                        <p class="flow-text">You can use the contact form to contact us, but I've got to admit social networks and email are so much easier to communicate both ways</p>
+                        <p class="flow-text">You can use the contact form to contact us, but I've got to admit social
+                            networks and email are so much easier to communicate both ways</p>
                         <div class="row">
                             <p class="col l4 m6 s12 flow-text">
                                 Email Us:
                                 <a href="mailto:kenyans@royals.co.ke">kenyans@royals.co.ke</a><br>
                                 Telegram:
                                 <a class="light-blue-text text-lighten-1" target="_blank"
-                                   href="https://t.me/kenyan_royals">@kenyan_royals</a><br>
+                                   href="https://t.me/kenyanroyals">@kenyanroyals</a><br>
                                 Facebook:
                                 <a class="blue-text text-darken-4" target="_blank" href="https://fb.me/kenyanroyals">@kenyanroyals</a><br>
                                 Twitter:
@@ -379,7 +404,8 @@
                                             <label for="txt_contact_message">Message</label>
                                         </div>
                                     </div>
-                                    <button class="waves-effect waves-light btn btn-flat light-green darken-4 white-text" type="button"><i class="fa fa-send-o">
+                                    <button class="waves-effect waves-light btn btn-flat light-green darken-4 white-text"
+                                            type="button"><i class="fa fa-send-o">
                                         Submit</i></button>
                                 </form>
                             </div>
@@ -389,36 +415,19 @@
             </ul>
         </div>
 
-        <div class="row white">
-            <h5 class="white col s12 light-green-text text-darken-4 center">Team</h5>
-            <div class="col s12  m10 offset-m1 l6">
-                <div class="row card-panel white" style="margin: 2px;">
-                    <h5 class="center"><a href="#" class="green-text">Billcountry</a></h5>
-                    <div class="row">
-                        <div class="col m4 l4 s12 center">
-                            <img class="profile-sm-md" src="img/profile/bill.jpg">
-                        </div>
-                        <span class="col flow-text m8 l8 s12 row">
+        <div class="row flex white">
+            <h5 class="white col s12 light-green-text text-darken-4 center" style="padding: 3px">Team</h5>
+            <div class="col s12  m10 offset-m1 l6 row white panel">
+                <h5 class="center"><a href="#" class="green-text">Billcountry</a></h5>
+                <div class="row">
+                    <div class="col m4 l4 s12 center">
+                        <a href="#" class="green-text"><img class="profile-sm-md" src="img/profile/bill.jpg"></a>
+                    </div>
+                    <span class="col flow-text m8 l8 s12 row">
                             <span class="col s12 center-on-small-only">A guy with a laptop</span>
                             <small class="col s12 semi-bold center-on-small-only">Contribution:</small>
                             <small class="col s12">Sometimes all you need to start something great is a laptop, skills, a good internet connection and motivation to do it. However I need a lot of help to keep it running, everyone is welcome.</small>
                         </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12  m10 offset-m1 l6">
-                <div class="row card-panel white" style="margin: 2px;">
-                    <h5 class="center"><a href="#" class="green-text">Naomi Kabura</a></h5>
-                    <div class="row">
-                        <div class="col m4 l4 s12 center">
-                            <img class="profile-sm-md" src="img/profile.jpg">
-                        </div>
-                        <span class="col flow-text m8 l8 s12 row">
-                            <span class="col s12 center-on-small-only">Your Job</span>
-                            <small class="col s12 semi-bold center-on-small-only">Contribution:</small>
-                            <small class="col s12">I'll need this from you Naomi</small>
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>

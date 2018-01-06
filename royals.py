@@ -87,19 +87,19 @@ def api_main():
     return Response(dict_to_json(out), mimetype="text/json")
 
 
-@app.route('/api/<string:action>', methods=['GET', 'POST', 'PUT', 'DELETE'])
-def api_actions(action):
+@app.route('/api/<string:api_action>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def api_actions(api_action):
     status = status_code.system_error
     out = {
         "success": False,
-        "message": "Use POST for action "+action+" and provide all the parameters as in the key params and headers."
+        "message": "Use POST for action "+api_action+" and provide all the parameters as in the key params and headers."
     }
     try:
-        if action in actions:
-            params = actions[action]["parameters"]
-            headers = actions[action]["headers"]
-            description = actions[action]["description"]
-            method = actions[action]["method"]
+        if api_action in actions:
+            params = actions[api_action]["parameters"]
+            headers = actions[api_action]["headers"]
+            description = actions[api_action]["description"]
+            method = actions[api_action]["method"]
             out["params"] = params
             out["headers"] = headers
             out["message"] = description
@@ -107,11 +107,11 @@ def api_actions(action):
             if request.method == method:
                 success, args = handle_parameters(params, headers)
                 if success:
-                    if "function" in actions[action]:
-                        out, status = actions[action]["function"](**args)
+                    if "function" in actions[api_action]:
+                        out, status = actions[api_action]["function"](**args)
                     else:
                         status = status_code.not_implemented
-                        out["message"] = "Action "+action+" is not yet implemented, come back soon"
+                        out["message"] = "Action "+api_action+" is not yet implemented, come back soon"
                 else:
                     status = status_code.invalid_data
                     out["message"] = "Please provide all the headers and parameters as " \
@@ -152,17 +152,17 @@ def handle_json(data):
         'action': 'acknowledge',
         'success': True
     })
-    action = data['action']
+    api_action = data['action']
     status = status_code.system_error
     out = {
         "success": False,
-        "message": "Use POST for action " + action + " and provide all the parameters as in the key params and headers."
+        "message": "Use POST for action " + api_action + " and provide all the parameters as in the key params and headers."
     }
     try:
-        if action in actions:
-            params = actions[action]["parameters"]
-            headers = actions[action]["headers"]
-            description = actions[action]["description"]
+        if api_action in actions:
+            params = actions[api_action]["parameters"]
+            headers = actions[api_action]["headers"]
+            description = actions[api_action]["description"]
             out["params"] = params
             out["headers"] = headers
             out["message"] = description
@@ -172,7 +172,7 @@ def handle_json(data):
                     out, status = actions[action]["function"](**args)
                 else:
                     status = status_code.not_implemented
-                    out["message"] = "Action "+action+" is not yet implemented, come back soon"
+                    out["message"] = "Action "+api_action+" is not yet implemented, come back soon"
             else:
                 status = status_code.invalid_data
                 out["message"] = "Please provide all the headers and parameters as " \

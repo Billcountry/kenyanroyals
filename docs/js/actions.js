@@ -75,6 +75,29 @@ on_click(pending_disp, {
     }
 });
 
+var success_list_body = document.querySelector("#s_l_body");
+var success_list_head = document.querySelector("#s_l_head");
+var success_profile_body = document.querySelector("#s_p_head");
+var success_profile_head = document.querySelector("#s_p_body");
+
+var open_success_profile = function (stage_id){
+    if(success_profile_body.classList.contains('hide-on-small-and-down'))
+        success_profile_body.classList.remove('hide-on-small-and-down');
+    if(success_profile_head.classList.contains('hide-on-small-and-down'))
+        success_profile_head.classList.remove('hide-on-small-and-down');
+    success_list_body.classList.add('hide-on-small-and-down');
+    success_list_head.classList.add('hide-on-small-and-down');
+};
+
+var close_success_profile = function () {
+    if(success_list_body.classList.contains('hide-on-small-and-down'))
+        success_list_body.classList.remove('hide-on-small-and-down');
+    if(success_list_head.classList.contains('hide-on-small-and-down'))
+        success_list_head.classList.remove('hide-on-small-and-down');
+    success_profile_body.classList.add('hide-on-small-and-down');
+    success_profile_head.classList.add('hide-on-small-and-down');
+};
+
 var toast = function (message) {
     Materialize.toast(message, 6000)
 };
